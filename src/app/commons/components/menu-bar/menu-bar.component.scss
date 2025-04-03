@@ -1,15 +1,65 @@
+// Estilo para o container do menu
 .menu {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    padding-bottom: 3rem;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  padding: 10px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
 }
 
-::ng-deep .menu-title {
-    font-size: 24px;
+// Estilo para os botões do menu
+button[mat-button] {
+  position: relative;
+  font-size: 16px;
+  padding: 10px 20px;
+  color: #333;
+  text-transform: uppercase;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+
+  // Estilo do botão ao passar o mouse
+  &:hover {
+    background-color: #f4f4f4;
+    transform: translateY(-2px);
+  }
+
+  // Estilo para o título dentro do botão
+  .menu-title {
+    font-size: 16px;
+    color: #00796b;
     font-weight: bold;
-    padding: 8px 16px;
-    text-align: center;
-    border-bottom: 1px solid #ddd;
+  }
+}
+
+// Estilo para os menus (quando aparecem)
+mat-menu {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+
+  // Estilo para os itens de menu
+  mat-menu-item {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #333;
+    transition: background-color 0.3s ease, color 0.3s ease;
+
+    // Estilo de hover para os itens do menu
+    &:hover {
+      background-color: #00796b;
+      color: white;
+    }
+  }
+}
+
+// Estilo para o botão de menu (ativo)
+mat-menu .mat-menu-item.active {
+  background-color: #00796b !important;
+  color: white !important;
 }
